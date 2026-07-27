@@ -13,20 +13,34 @@ lives in a separate private repository.
 
 1. Download `ClipWise-<version>.zip` from the latest release.
 2. Unzip it and drag **ClipWise.app** into your **Applications** folder.
-3. **Right-click ClipWise.app → Open → Open.**
+3. Open **Terminal** and paste this, then press Return:
 
-That's it. Step 3 is only needed the very first time — see below for why.
+   ```
+   xattr -dr com.apple.quarantine /Applications/ClipWise.app
+   ```
+
+4. Open ClipWise normally.
 
 Requires macOS 14 (Sonoma) or later, on an **Apple Silicon** Mac (M1 or newer).
 
-### Why the right-click on first launch
+### Why that Terminal step
 
-macOS will say ClipWise "cannot be opened because it is from an unidentified
-developer." The app is signed, but not notarized by Apple, and macOS blocks
-anything downloaded that isn't.
+ClipWise is code-signed, but it is not *notarized* — notarization requires a paid
+Apple Developer account. macOS blocks any downloaded app that isn't notarized,
+with the message *"Apple could not verify ClipWise is free of malware."*
 
-Right-click → **Open** tells macOS you trust it. You only do this once per Mac.
-Double-clicking works normally from then on, and updates install without it.
+That command removes the "downloaded from the internet" flag macOS puts on the
+file. It changes nothing about the app itself, and the code signature stays
+intact — you can check with `codesign --verify /Applications/ClipWise.app`.
+
+**Prefer not to use Terminal?** Try to open ClipWise, dismiss the warning, then
+go to **System Settings → Privacy & Security**, scroll down, and click **Open
+Anyway** next to the ClipWise message. Then open the app again and confirm.
+
+(On macOS 14 you can also just right-click the app and choose **Open**. Apple
+removed that shortcut in macOS 15.)
+
+Either way it's a one-time step. Updates after that install silently.
 
 ---
 
