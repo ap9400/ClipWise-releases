@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>ClipWise</title>
+        <item>
+            <title>2.7.0</title>
+            <pubDate>Sun, 26 Jul 2026 19:48:38 -0600</pubDate>
+            <link>https://github.com/ap9400/ClipWise-releases</link>
+            <sparkle:version>61</sparkle:version>
+            <sparkle:shortVersionString>2.7.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/ap9400/ClipWise-releases/releases/download/2.7.0/ClipWise-2.7.0.zip" length="6609731" type="application/octet-stream" sparkle:edSignature="0eBGrZNUZduYcRSgDIJA/jKvOJiXAxCSgxW+rb/BhKJbKcmsXAkiiPzbdMEkrjNT7U37QnBq6O4zC+0vnklaBA=="/>
+        </item>
+    </channel>
+</rss>
