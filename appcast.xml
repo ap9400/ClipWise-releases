@@ -4,12 +4,12 @@
         <title>ClipWise</title>
         <item>
             <title>2.7.0</title>
-            <pubDate>Sun, 26 Jul 2026 23:33:10 -0600</pubDate>
+            <pubDate>Mon, 27 Jul 2026 13:46:46 -0600</pubDate>
             <link>https://github.com/ap9400/ClipWise-releases</link>
-            <sparkle:version>64</sparkle:version>
+            <sparkle:version>65</sparkle:version>
             <sparkle:shortVersionString>2.7.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/ap9400/ClipWise-releases/releases/download/2.7.0/ClipWise-2.7.0.zip" length="6705272" type="application/octet-stream" sparkle:edSignature="vp3hOzjMZ3T8h1Vb5LIe93dN8nJ9+7Hmh0wFZCycpXomUK142Z6bgJb93O02E6qpXLtMYYOGpKB81g9NAjGqAg=="/>
+            <enclosure url="https://github.com/ap9400/ClipWise-releases/releases/download/2.7.0/ClipWise-2.7.0.zip" length="6713722" type="application/octet-stream" sparkle:edSignature="OZ6ybnFtW+ZLkSvSYfWCY8UTEHYvgax4k4SE8uZKcTmb6adMBZrez+4A0pL6YzG+sH60P3nYYNq69hfNitivBg=="/>
         </item>
     </channel>
 </rss>
