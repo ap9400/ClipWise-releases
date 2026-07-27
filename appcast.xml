@@ -1,15 +1,15 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" standalone="yes"?>
 <rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>ClipWise</title>
         <item>
             <title>2.7.0</title>
-            <pubDate>Sun, 26 Jul 2026 22:03:24 -0600</pubDate>
+            <pubDate>Sun, 26 Jul 2026 23:22:18 -0600</pubDate>
             <link>https://github.com/ap9400/ClipWise-releases</link>
-            <sparkle:version>62</sparkle:version>
+            <sparkle:version>63</sparkle:version>
             <sparkle:shortVersionString>2.7.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/ap9400/ClipWise-releases/releases/download/2.7.0/ClipWise-2.7.0.zip" length="6647572" type="application/octet-stream" sparkle:edSignature="NFuAKs7nwV0Ol4OTxAX8JllepLFC7qesUio8kt+Q2i6sTCf/oDzWDPArprKepVHQYtSXXOSUhs6b4Wjpm6K0CA==" />
+            <enclosure url="https://github.com/ap9400/ClipWise-releases/releases/download/2.7.0/ClipWise-2.7.0.zip" length="6706445" type="application/octet-stream" sparkle:edSignature="cS3SYgfD6PWG5MbCaxAgOBTSiILFVmCzHa6SFwQ8/PICTeNNA2DDTabgiLYunZMaC7zLWfh8d9O87AMPpgGUCw=="/>
         </item>
-        </channel>
+    </channel>
 </rss>
