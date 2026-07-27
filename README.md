@@ -1,66 +1,96 @@
-# ClipWise — Downloads
+# ClipWise
 
-Public downloads and the automatic-update feed for **ClipWise**, a clipboard
-manager and AI text assistant for macOS. The source lives in a separate private
-repository; this one exists so the app can fetch its own updates.
+A clipboard manager and AI text assistant for macOS.
 
-## Download
+This repository hosts the downloads and the automatic-update feed. The source
+lives in a separate private repository.
 
-**[Download the latest ClipWise release →](../../releases/latest)**
+---
 
-Grab `ClipWise-<version>.zip`, unzip it, and drag **ClipWise.app** to your
-Applications folder. That is the whole install — you do not need anything else on
-this page.
+## Install
 
-> **The first launch needs one extra step.** macOS will say ClipWise "cannot be
-> opened because it is from an unidentified developer." That is expected: the app
-> is signed but not notarized by Apple.
->
-> **Right-click ClipWise.app → Open → Open.**
->
-> Only needed once, on each Mac. Every update after that installs on its own.
+### **[⬇ Download ClipWise](../../releases/latest)**
 
-Requires macOS 14 (Sonoma) or later.
+1. Download `ClipWise-<version>.zip` from the latest release.
+2. Unzip it and drag **ClipWise.app** into your **Applications** folder.
+3. **Right-click ClipWise.app → Open → Open.**
+
+That's it. Step 3 is only needed the very first time — see below for why.
+
+Requires macOS 14 (Sonoma) or later, on an **Apple Silicon** Mac (M1 or newer).
+
+### Why the right-click on first launch
+
+macOS will say ClipWise "cannot be opened because it is from an unidentified
+developer." The app is signed, but not notarized by Apple, and macOS blocks
+anything downloaded that isn't.
+
+Right-click → **Open** tells macOS you trust it. You only do this once per Mac.
+Double-clicking works normally from then on, and updates install without it.
+
+---
 
 ## Updates are automatic
 
-ClipWise checks for updates once a day and offers them when they appear. You can
-turn that off, or check immediately, in **Settings → General**. Updates are
-cryptographically signed, and ClipWise installs one only if the signature
-matches.
+ClipWise checks for a new version once a day and offers it when one appears.
+Nothing to download by hand, and no need to come back to this page.
 
-## About the two kinds of release here
+You can turn automatic checks off, or check right now, in **Settings → General**.
 
-Releases on this page come in two flavours. **You only ever download the first.**
+Every update is cryptographically signed. ClipWise installs one only if the
+signature matches, so an update can't come from anywhere but here.
 
-| Tag | What it is | Do I download it? |
+---
+
+## The offline voice (optional)
+
+ClipWise's **Reader** reads text aloud — select text anywhere and press
+**⇧⌃R**, and it reads it back with the current word highlighted.
+
+**It works the moment you install the app**, using the voices built into macOS.
+There is nothing extra to download and nothing to set up.
+
+If you want better speech, ClipWise can also use **Kokoro**, a neural
+text-to-speech model that runs on your own Mac:
+
+|  | Built-in macOS voices | Kokoro |
 | --- | --- | --- |
-| `2.7.0` (a version number) | The ClipWise app | **Yes** — this is the app |
-| `tts-runtime-1.0.0` | The offline voice package | No — the app fetches it for you |
+| Available | Immediately | ~500 MB download |
+| Quality | Robotic but clear | Natural |
+| Word highlighting | Approximate | Exact |
+| Voices | Your installed system voices | 28 English (US & UK) |
 
-### Why the voice package is separate
+### Getting it
 
-ClipWise's **Reader** reads text aloud. It works the moment you install the app,
-using the voices built into macOS.
+**The app does this for you.** Open the Reader, choose **Kokoro**, and it offers
+**Set Up Offline Voice** — it tells you the size, shows progress, and installs
+it. There's a Remove button in the same place if you change your mind.
 
-It can also use **Kokoro**, a neural text-to-speech model that sounds
-considerably more natural and reports exact per-word timing, so the highlight
-follows the speech precisely. Kokoro brings its own Python runtime and model
-weights — a few hundred megabytes — so it is not bundled into the app. Instead:
+You never need to download it from this page. The `tts-runtime-*` releases here
+exist so the app has somewhere to fetch it from.
 
-- The app stays small, and app updates stay small.
-- You are asked before anything is downloaded, and told the size first.
-- If you never use the Reader, you never download it.
+### Once installed
 
-To install it: open the Reader, pick **Kokoro**, and choose **Set Up Offline
-Voice**. ClipWise downloads and installs it, and there is a Remove button in the
-same window.
+- Runs entirely on your Mac. No account, no API key, no subscription.
+- Works with **no internet connection** — the model sits on your disk and
+  nothing is ever sent anywhere.
+- App updates never re-download it.
 
-Once installed it runs entirely on your Mac. It needs no account, no API key, and
-no internet connection — the model is on your disk and nothing is sent anywhere.
+It's a separate download rather than part of the app because most people never
+open the Reader, and bundling it would mean everyone pays 500 MB for a feature
+they may not use.
 
-Currently published for **Apple Silicon** Macs only.
+---
+
+## What's in the releases list
+
+| Tag | What it is | Download it? |
+| --- | --- | --- |
+| `2.7.0` and similar version numbers | **The ClipWise app** | **Yes** — this is the app |
+| `tts-runtime-1.1.0` | Offline voice package | No — the app fetches it for you |
+
+---
 
 ## Something wrong?
 
-Please open an issue on this repository.
+Please [open an issue](../../issues).
