@@ -1,11 +1,11 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "runtimes": [
     {
       "arch": "arm64",
-      "url": "https://github.com/ap9400/ClipWise-releases/releases/download/tts-runtime-1.0.0/clipwise-tts-runtime-1.0.0-arm64.tar.gz",
-      "sha256": "51ed40a0128f89881fc33ac873d6720251bbc91c763627cbc73640a98702f0c0",
-      "bytes": 534203739
+      "url": "https://github.com/ap9400/ClipWise-releases/releases/download/tts-runtime-1.1.0/clipwise-tts-runtime-1.1.0-arm64.tar.gz",
+      "sha256": "411814218ce5e4df13e9dab89e1dcc76de4200b4d3278880d0d4e39fe1741be4",
+      "bytes": 527993003
     }
   ]
 }
