@@ -1,16 +1,4 @@
-<?xml version="1.0" standalone="yes"?>
-<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
-    <channel>
-        <title>ClipWise</title>
-        <item>
-            <title>2.7.1</title>
-            <pubDate>Mon, 27 Jul 2026 16:16:52 -0600</pubDate>
-            <link>https://github.com/ap9400/ClipWise-releases</link>
-            <sparkle:fullReleaseNotesLink>https://github.com/ap9400/ClipWise-releases/blob/main/CHANGELOG.md</sparkle:fullReleaseNotesLink>
-            <sparkle:version>70</sparkle:version>
-            <sparkle:shortVersionString>2.7.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Fixed</h3>
+<h3>Fixed</h3>
 <ul>
 <li>The Reader no longer plays a voice sample before your text. The local voice engine reports its progress on the same channel it returns audio on, and the app only skipped those progress messages when something was listening for them — so a preview's audio could be handed to your reading instead.</li>
 <li>Word highlighting follows the words actually being spoken again. It was the same fault: the reading received another request's word timings along with its audio, so the highlight had nothing to do with what you heard.</li>
@@ -29,17 +17,3 @@
 <li>Update notes. Each release now carries a description of what changed, shown in the update dialog before you install and reachable from there as a full history. Previously an update offered a version number and nothing else.</li>
 <li>A "What's New" window the first time a newly installed version runs, so a change you notice afterwards has somewhere to be explained. It is silent on a first install, where there is nothing to compare against.</li>
 </ul>
-]]></description>
-            <enclosure url="https://github.com/ap9400/ClipWise-releases/releases/download/2.7.1/ClipWise-2.7.1.zip" length="6782425" type="application/octet-stream" sparkle:edSignature="n4eJnRsKJAeLxX9mPAwYk3dPPwwZSju56OSH3YDMwsJx/+kM6i4X4LsMRISF90qRO0on/h7G0X236JZPZHtUDw=="/>
-        </item>
-        <item>
-            <title>2.7.0</title>
-            <pubDate>Mon, 27 Jul 2026 14:17:23 -0600</pubDate>
-            <link>https://github.com/ap9400/ClipWise-releases</link>
-            <sparkle:version>67</sparkle:version>
-            <sparkle:shortVersionString>2.7.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/ap9400/ClipWise-releases/releases/download/2.7.0/ClipWise-2.7.0.zip" length="6731444" type="application/octet-stream" sparkle:edSignature="wGFyYYIwyUaHwth70C06hYnkLWQG4Vk6SvJ4BAnBof9rzd2sr8MGCklN1eLDi0h/K2c4GF71l5oM2GuMLV+nDw=="/>
-        </item>
-    </channel>
-</rss>
