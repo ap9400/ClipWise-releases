@@ -3,6 +3,25 @@
     <channel>
         <title>ClipWise</title>
         <item>
+            <title>2.8.0</title>
+            <pubDate>Sun, 02 Aug 2026 11:44:36 -0600</pubDate>
+            <link>https://github.com/ap9400/ClipWise-releases</link>
+            <sparkle:fullReleaseNotesLink>https://github.com/ap9400/ClipWise-releases/blob/main/CHANGELOG.md</sparkle:fullReleaseNotesLink>
+            <sparkle:version>71</sparkle:version>
+            <sparkle:shortVersionString>2.8.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>Protected Secrets: a new Settings pane for keeping a password or other short secret in ClipWise and copying it to the clipboard on demand. Each secret gets its own keyboard shortcut; every use requires Touch ID or your device password; the copy is wiped from the clipboard automatically after a short delay. Secrets never appear in ClipWise's own clipboard history. Ships with a few example entries so the Settings pane isn't empty on first look — delete them any time.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>The Reader's "There is no text to read" error no longer gets stuck on screen forever. "Try Again" used to resend the same empty text and reproduce the identical error every time, with no way to dismiss it; the dialog now offers a way to close it, and the app refuses to open a Reader window for empty text in the first place.</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/ap9400/ClipWise-releases/releases/download/2.8.0/ClipWise-2.8.0.zip" length="6902208" type="application/octet-stream" sparkle:edSignature="b92M+XZU9TE6sxhHpd9eRwK5KBJqUKBCiF9wRRLDrz2pCMq7Y564YPYe9yEF5jcIeawDrGzT+qVvlXncflDvBw=="/>
+        </item>
+        <item>
             <title>2.7.1</title>
             <pubDate>Mon, 27 Jul 2026 16:16:52 -0600</pubDate>
             <link>https://github.com/ap9400/ClipWise-releases</link>
