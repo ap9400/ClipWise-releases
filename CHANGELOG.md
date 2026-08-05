@@ -13,6 +13,55 @@ lived through it and deserves to know it is gone.
 
 ## Unreleased
 
+## 2.9.0 — 2026-08-04
+
+### Added
+- Protected Secrets: press Control+Command+P anywhere to search every
+  secret you've saved. Type part of a name, pick with the arrow keys, press
+  Return, and Touch ID copies it to the clipboard as usual. Once you have
+  more than a handful of secrets this replaces having to remember a separate
+  shortcut for each one — and before you type anything, it lists what you
+  used most recently first. Accents and capitals don't matter, so a secret
+  saved for "münchen.de" is found by typing "munchen". The shortcut is
+  rebindable in Settings › Secrets.
+- Secrets can now carry tags — comma-separated words like "work, vpn,
+  login" — so you can find one by what it's for and not only by what you
+  called it. Tags are searched alongside the name, are never copied to the
+  clipboard, and never leave your Mac.
+- You can now bulk-import passwords from a Chrome or Chromium CSV export.
+  Chrome, Edge, Brave, Vivaldi and Opera can all save every password you
+  have to a CSV file; Settings › Secrets reads that file, shows you what
+  it found, and lets you tick off exactly which entries to keep. Passwords
+  are never shown on screen during the import. Each one you keep becomes a
+  normal Protected Secret in the Keychain behind Touch ID, named after its
+  site and account and tagged with its site — so typing the site name in
+  the search palette finds it straight away.
+- Importing the same export a second time no longer quietly doubles
+  everything. Entries you already have are marked "Already saved" and left
+  unticked, so re-importing after saving a few new logins in your browser
+  adds only what's new.
+- Settings › Secrets now has a filter box once you have more than a handful
+  of secrets, so a few hundred imported logins are still a list you can find
+  one thing in.
+- After an import, ClipWise tells you where that CSV file still is and
+  offers to move it to the Trash. A browser password export is every
+  password you have saved, sitting in plain text in your Downloads folder;
+  importing it here doesn't change that, and nothing is deleted unless you
+  ask for it. If you don't deal with it there and then, Settings › Secrets
+  keeps reminding you until you do — that offer used to disappear the moment
+  the window closed.
+- Settings › Secrets has a "Delete All Secrets" option, for starting over or
+  clearing out a browser import — one confirmation, and it removes the
+  Keychain values themselves, not just the list.
+
+### Security
+- The list of secret names and tags that ClipWise keeps on disk is now
+  readable only by you. It has never held a secret's value — those are in
+  the Keychain — but after a browser import it does describe which sites you
+  have accounts on and under which username, and it was being written with
+  default permissions that let any program running as you read it. Settings ›
+  Secrets now says plainly what that file holds.
+
 ## 2.8.0 — 2026-08-02
 
 ### Added
@@ -25,6 +74,27 @@ lived through it and deserves to know it is gone.
   look — delete them any time.
 
 ### Fixed
+- Resizing the clipboard popup no longer quits ClipWise. Dragging its edge
+  wrote your window size to disk on every step of the drag, and each write
+  woke enough of the app to restart the window's layout — so the window could
+  be asked to lay itself out again faster than it could finish, until macOS
+  gave up and terminated ClipWise. It now records the size once you let go.
+  Hovering the divider between the list and the preview also left a stray
+  resize cursor behind each time, which contributed to the same pile-up.
+- Copying the same thing twice no longer deletes it from your history.
+  Whenever a copy matched something already saved, ClipWise removed the old
+  entry to replace it — and then immediately deleted the replacement too,
+  believing it was over the history limit. It was not: this happened at any
+  history size, with a thousand items against a limit of two thousand. Anything
+  you copied a second time simply vanished.
+- ClipWise no longer disappears without warning while you are copying. The
+  entry deleted above was still listed in the index used to spot duplicates,
+  so the next time you copied that same text ClipWise went looking for
+  something that no longer existed and quit instantly — no error, no dialog,
+  nothing on screen. It was most likely to strike text you copy repeatedly,
+  which is why it felt random. The same could happen to anything removed by
+  the history limit, the storage budget, or Clear History; all of those are
+  safe now.
 - The Reader's "There is no text to read" error no longer gets stuck on
   screen forever. "Try Again" used to resend the same empty text and
   reproduce the identical error every time, with no way to dismiss it; the

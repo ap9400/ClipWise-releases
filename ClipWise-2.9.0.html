@@ -1,0 +1,14 @@
+<h3>Added</h3>
+<ul>
+<li>Protected Secrets: press Control+Command+P anywhere to search every secret you've saved. Type part of a name, pick with the arrow keys, press Return, and Touch ID copies it to the clipboard as usual. Once you have more than a handful of secrets this replaces having to remember a separate shortcut for each one — and before you type anything, it lists what you used most recently first. Accents and capitals don't matter, so a secret saved for "münchen.de" is found by typing "munchen". The shortcut is rebindable in Settings › Secrets.</li>
+<li>Secrets can now carry tags — comma-separated words like "work, vpn, login" — so you can find one by what it's for and not only by what you called it. Tags are searched alongside the name, are never copied to the clipboard, and never leave your Mac.</li>
+<li>You can now bulk-import passwords from a Chrome or Chromium CSV export. Chrome, Edge, Brave, Vivaldi and Opera can all save every password you have to a CSV file; Settings › Secrets reads that file, shows you what it found, and lets you tick off exactly which entries to keep. Passwords are never shown on screen during the import. Each one you keep becomes a normal Protected Secret in the Keychain behind Touch ID, named after its site and account and tagged with its site — so typing the site name in the search palette finds it straight away.</li>
+<li>Importing the same export a second time no longer quietly doubles everything. Entries you already have are marked "Already saved" and left unticked, so re-importing after saving a few new logins in your browser adds only what's new.</li>
+<li>Settings › Secrets now has a filter box once you have more than a handful of secrets, so a few hundred imported logins are still a list you can find one thing in.</li>
+<li>After an import, ClipWise tells you where that CSV file still is and offers to move it to the Trash. A browser password export is every password you have saved, sitting in plain text in your Downloads folder; importing it here doesn't change that, and nothing is deleted unless you ask for it. If you don't deal with it there and then, Settings › Secrets keeps reminding you until you do — that offer used to disappear the moment the window closed.</li>
+<li>Settings › Secrets has a "Delete All Secrets" option, for starting over or clearing out a browser import — one confirmation, and it removes the Keychain values themselves, not just the list.</li>
+</ul>
+<h3>Security</h3>
+<ul>
+<li>The list of secret names and tags that ClipWise keeps on disk is now readable only by you. It has never held a secret's value — those are in the Keychain — but after a browser import it does describe which sites you have accounts on and under which username, and it was being written with default permissions that let any program running as you read it. Settings › Secrets now says plainly what that file holds.</li>
+</ul>
